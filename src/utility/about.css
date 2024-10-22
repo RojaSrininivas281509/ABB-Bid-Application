@@ -1,0 +1,32 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;  
+}
+@media (min-width: 900px) {
+    .col-md-6 {
+        width: calc(6 / 12* 100%);
+        flex: 0 0 auto;
+    }
+
+}
+
+.p-2 {
+    padding: 4.5rem !important;
+}
+.about-image{
+    margin-top:20px;
+    
+}
+.about-section p {
+    line-height: 28px;
+    padding: 10px 0px;
+    text-align: justify;
+    color: #000000;
+    font-weight: 500;
+}
+.param-1{
+    font-size: 15px;
+    font-weight: 200;
+    margin-left: 5px;
+    font-family: sans-serif;
+}

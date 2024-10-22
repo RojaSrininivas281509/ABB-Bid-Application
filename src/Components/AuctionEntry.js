@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css'
 export default function AuctionEntry(){
     return(
         <div className='body-container'>

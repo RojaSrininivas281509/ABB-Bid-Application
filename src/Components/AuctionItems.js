@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-export default function AuctionItems(){
+export default function AuctionItems({type}){
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -32,6 +32,7 @@ export default function AuctionItems(){
 
     const totalPages = Math.ceil(products.length / itemsPerPage);
     const redirectLogin=()=>{
+        console.log('Roja', type);
 
     }
 
@@ -45,7 +46,7 @@ export default function AuctionItems(){
                     <h3 className='product-name'>{item.productname}</h3>
                     <p className='product-price'>Minimum Bid: {item.price.sellingPrice.formattedValue}</p>
                     <p className='product-price'>Current Bid: {item.price.mrpPrice.formattedValue}</p>
-                    <button className='product-btn' onClick={redirectLogin}>Bid now</button>
+                    <button className='product-btn' onClick={redirectLogin} disabled={type===''}>Bid now</button>
                 </div>
             ))}
             </div>
