@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+.header{
+  display:flex;
+  justify-content: space-between;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+}
+.logo{
+  width:100px;
+  margin-left:30px;
+}
+.nav-items > ul{
+  display:flex;
+  margin-right:40px;
+}
+.nav-items > ul > li{
+  padding: 10px;
+  margin:10px;
+  list-style-type: none;
+}
+.body-container{
+  width:fit-content;
+  display:flex;
+  justify-content: space-between;
+  border: 1px solid whitesmoke;
+
+}
+.body-logo{
+  margin-right: 100px;
+}
+p{
+  font-size: xxx-large;
+  font-weight: 600;
+  margin-left: 100px;
+}
+span{
+  margin-left: 100px;
+  font-size: small;
+}
+.card-container{
+  display:flex;
+  flex-wrap: wrap;
+}
+.product-card{
+  background-color: white;
+  border: 1px solid whitesmoke;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 405px;
+  transition: transform 0.3s;
+  padding: 10px;
+  margin: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-image {
+  background-color: aqua;
+  max-width: 40%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-card:hover {
+  transform: scale(1.05);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-name {
+  font-size: small;
+  margin: 10px 0;
+}
+.product-price {
+  font-size: 1em;
+  color: #333;
+  margin: 10px 0;
+}
+.product-brand{
+  font-size: 1em;
+  font-weight: bolder;
+  color: whitesmoke;
+  margin: 1px 0;
+  border-radius: 12px solid grey;
+  border: 1px solid whitesmoke;
+  padding: 3px;
+  background-color: #C45500!important;
+  width: fit-content;
+}
+.product-btn{
+  color:rgb(128, 128, 128)
+}
+.pagination {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button:hover {
+  background-color: #0056b3;
+  color: white;
 }
