@@ -7,8 +7,24 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
+        const response = await fetch('http://localhost:5000/api/data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            //body: JSON.stringify({ userId }),
+        });
+        if (response.ok) {
+           await response.json();
+
+        } else {
+            console.error('Login failed');
+        }
+
+        
+        //console.log(data.message);
         navigate('/auctions')
         setEmail('');
         setPassword('');
