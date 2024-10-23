@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
+import { HomeImg } from '../utility/common';
 
 const Header = () => {
     return (
@@ -8,7 +9,7 @@ const Header = () => {
             <div className="logo-container">
                 <img
                     className="logo"
-                    src="https://www.shutterstock.com/image-vector/auction-logo-initial-letter-design-260nw-1901724895.jpg"
+                    src={HomeImg}
                     alt="Logo"
                 />
             </div>

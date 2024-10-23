@@ -1,5 +1,6 @@
 import React from 'react';
 import '../utility/about.css';
+import { AboutImg } from '../utility/common';
 export default function About(){
     return (
         <div className="row">
@@ -18,7 +19,7 @@ export default function About(){
             </div>
 
             <div className="col-md-6">
-            <div className="about-image"><img alt="About Us" src="https://www.eauctionsindia.com/assets/images/aboutuspage.png"/></div>
+            <div className="about-image"><img alt="About Us" src={AboutImg}/></div>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css'
+import { AuctionEntryImg } from '../utility/common';
 export default function AuctionEntry(){
     return(
         <div className='body-container'>
@@ -9,7 +10,7 @@ export default function AuctionEntry(){
                <br/>
             </div>
             <div className='body-logo'>
-                <img src="https://st2.depositphotos.com/1809585/7376/i/450/depositphotos_73762623-stock-photo-euphoric-woman-watching-her-smart.jpg"/>
+                <img src={AuctionEntryImg}/>
             </div>
         </div>   
     )

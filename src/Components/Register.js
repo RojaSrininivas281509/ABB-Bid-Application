@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../utility/register.css'; // Adjust the path as necessary
+import '../utility/register.css'; 
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -13,24 +13,13 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        // Basic validation
+
         if (password !== confirmPassword) {
             alert("Passwords do not match!");
             return;
         }
-
-        // Here, you would typically handle registration logic (e.g., API call)
-        console.log('Name:', name);
-        console.log('Email:', email);
-        console.log('Password:', password);
-        console.log('Phone:', phone);
-        console.log('Address:', address);
-        
-        // Navigate to the login page upon successful registration
         navigate('/login');
         
-        // Reset the form (optional)
         setName('');
         setEmail('');
         setPassword('');
